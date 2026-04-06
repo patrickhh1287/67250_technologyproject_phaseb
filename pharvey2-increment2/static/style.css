@@ -1,0 +1,110 @@
+/* Part 3: Global styles using universal selector */
+* {
+    padding: 5px;
+    margin: 5px;
+    background: #0b0b0c;
+    color: #f5f5f7;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    line-height: 1.5;
+    font-style: normal;
+}
+
+/* Part 5: Logo sizing */
+#logo {
+    width: 18%;
+    display: block;
+}
+
+/* Part 6: Nav link styling */
+nav a {
+    text-decoration: none;
+    color: #f5f5f7;
+    font-weight: 400;
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+}
+
+/* Hover effect on nav links */
+nav a:hover {
+    border-color: #4d5c3b;
+}
+
+/* Highlight for current page */
+#navselected {
+    color: #92ad70;
+}
+
+/* Part 7: CTA button for Buy Tickets on homepage */
+.cta {
+    background-color: #92ad70;
+    color: #0b0b0c;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 400;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.cta:hover {
+    background-color: #7a9460;
+    color: #0b0b0c;
+}
+
+/* Part 8: Footer styling */
+footer {
+    border-top: 1px solid rgba(245, 245, 247, .12);
+    padding: 18px 16px;
+    text-align: center;
+    color: rgba(245, 245, 247, .72);
+}
+
+/* Part 9: Table styling for tickets page */
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: fit-content;
+    background-color: #1a1a1d;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+    color: #0b0b0c;
+}
+
+tr:nth-child(even) td {
+    background-color: #f2f2f2;
+    color: #0b0b0c;
+}
+
+td {
+    padding: 8px;
+}
+
+/* Part 10: Form styling for checkout page */
+form * {
+    margin: auto;
+    text-align: center;
+}
+
+/* Content area spacing */
+.main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Heading weight adjustments */
+h1, h2, h3 {
+    font-weight: 400;
+}
