@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Patrick Harvey">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+    <title>MonoMuse - Buy Tickets</title>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="buytickets.html">Buy Tickets</a>
+            <a href="javascript:void(0);" class="hamburger" onclick="toggleNav()">&#9776;</a>
+        </nav>
+
+        <main class="main">
+            <h2>Buy Tickets</h2>
+            <p>Select the ticket type that best fits your needs.</p>
+
+            <h3>Ticket Prices</h3>
+            <table>
+                <tr>
+                    <th>Ticket Type</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>General Admission</td>
+                    <td>Full access to all exhibitions</td>
+                    <td>$18</td>
+                </tr>
+                <tr>
+                    <td>Children</td>
+                    <td>Under 18 free of charge</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td>Student</td>
+                    <td>Student ID required</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Member</td>
+                    <td>Member ID required</td>
+                    <td>$15</td>
+                </tr>
+            </table>
+
+            <h3>May 2026 Schedule</h3>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Exhibition</th>
+                    <th>Time</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>May 3, 2026</td>
+                    <td>Digital Dreams</td>
+                    <td>10:00 AM - 5:00 PM</td>
+                    <td><button class="buy-now-btn" onclick="showPurchaseForm()">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>May 10, 2026</td>
+                    <td>Code &amp; Canvas</td>
+                    <td>10:00 AM - 5:00 PM</td>
+                    <td><button class="buy-now-btn" onclick="showPurchaseForm()">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>May 17, 2026</td>
+                    <td>Digital Dreams</td>
+                    <td>10:00 AM - 5:00 PM</td>
+                    <td><button class="buy-now-btn" onclick="showPurchaseForm()">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>May 24, 2026</td>
+                    <td>Code &amp; Canvas</td>
+                    <td>10:00 AM - 5:00 PM</td>
+                    <td><button class="buy-now-btn" onclick="showPurchaseForm()">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>May 31, 2026</td>
+                    <td>Digital Dreams</td>
+                    <td>10:00 AM - 5:00 PM</td>
+                    <td><button class="buy-now-btn" onclick="showPurchaseForm()">Buy Now</button></td>
+                </tr>
+            </table>
+
+            <div id="purchaseForm">
+                <h3>Purchase Tickets</h3>
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="ticket-type">Ticket Type:</label><br>
+                <select id="ticket-type" name="ticket-type" required>
+                    <option value="">Select a ticket type</option>
+                    <option value="general">General - $18</option>
+                    <option value="child">Child - Free</option>
+                    <option value="student">Student - $10</option>
+                    <option value="member">Member - $15</option>
+                </select><br><br>
+
+                <label for="quantity">Number of Tickets:</label><br>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" required><br><br>
+
+                <button id="submitPurchase" onclick="submitTickets()">Complete Purchase</button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>
