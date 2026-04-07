@@ -1,0 +1,194 @@
+/* Global styles using universal selector */
+* {
+    padding: 5px;
+    margin: 5px;
+    background: #0b0b0c;
+    color: #f5f5f7;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    line-height: 1.5;
+    font-style: normal;
+}
+
+/* =============================================
+   Part 2: CSS Grid Layout
+   ============================================= */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        'header header'
+        'nav_bar nav_bar'
+        'main main-img'
+        'footer footer';
+}
+
+.header {
+    grid-area: header;
+}
+
+.nav_bar {
+    grid-area: nav_bar;
+    display: flex;
+    justify-content: right;
+}
+
+.main {
+    grid-area: main;
+    padding: 20px;
+}
+
+.main_figure {
+    grid-area: main-img;
+}
+
+.footer {
+    grid-area: footer;
+    border-top: 1px solid rgba(245, 245, 247, .12);
+    padding: 18px 16px;
+    text-align: center;
+    color: rgba(245, 245, 247, .72);
+}
+
+/* =============================================
+   Logo
+   ============================================= */
+
+#logo {
+    width: 18%;
+    display: block;
+}
+
+/* =============================================
+   Navigation
+   ============================================= */
+
+nav a {
+    text-decoration: none;
+    color: #f5f5f7;
+    font-weight: 400;
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+}
+
+nav a:hover {
+    border-color: #4d5c3b;
+}
+
+/* Part 4: Active navigation — replaces #navselected */
+nav a.active {
+    color: #92ad70;
+}
+
+/* =============================================
+   CTA Button
+   ============================================= */
+
+.cta {
+    background-color: #92ad70;
+    color: #0b0b0c;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 400;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.cta:hover {
+    background-color: #7a9460;
+    color: #0b0b0c;
+}
+
+/* =============================================
+   Table Styling
+   ============================================= */
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: fit-content;
+    background-color: #1a1a1d;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+    color: #0b0b0c;
+}
+
+tr:nth-child(even) td {
+    background-color: #f2f2f2;
+    color: #0b0b0c;
+}
+
+td {
+    padding: 8px;
+}
+
+/* =============================================
+   Form Styling
+   ============================================= */
+
+form * {
+    margin: auto;
+    text-align: left;
+}
+
+/* =============================================
+   Part 5: Read More / Read Less (index.html)
+   ============================================= */
+
+#longIntro {
+    display: none;
+}
+
+#readLess {
+    display: none;
+}
+
+#readMore, #readLess {
+    color: #92ad70;
+    cursor: pointer;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+/* =============================================
+   Part 6: Buy Tickets — Hidden Purchase Form
+   ============================================= */
+
+#purchaseForm {
+    display: none;
+}
+
+.btn-buynow {
+    background-color: #92ad70;
+    color: #0b0b0c;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.btn-buynow:hover {
+    background-color: #7a9460;
+    color: #0b0b0c;
+}
+
+/* =============================================
+   Images & Headings
+   ============================================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+}
