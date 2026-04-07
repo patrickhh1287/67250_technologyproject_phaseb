@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Patrick Harvey">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+    <title>MonoMuse - Checkout</title>
+</head>
+<body onload="addYear()">
+    <header>
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Buy Tickets</a>
+            <a id="navselected" href="checkout.html">Checkout</a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <h2>Purchase Tickets</h2>
+        <form>
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="visit-date">Visit Date:</label><br>
+            <input type="date" id="visit-date" name="visit-date" required><br><br>
+
+            <label for="ticket-type">Ticket Type:</label><br>
+            <select id="ticket-type" name="ticket-type" required>
+                <option value="">Select a ticket type</option>
+                <option value="general">General - $18</option>
+                <option value="student">Student - $10</option>
+                <option value="member">Member - $15</option>
+            </select><br><br>
+
+            <label for="quantity">Quantity:</label><br>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" required><br><br>
+
+            <button type="submit">Complete Purchase</button>
+        </form>
+    </div>
+
+    <footer>
+        <p id="copyYear"></p>
+    </footer>
+</body>
+</html>
